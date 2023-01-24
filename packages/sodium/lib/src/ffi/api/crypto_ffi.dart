@@ -14,6 +14,7 @@ import '../../api/short_hash.dart';
 import '../../api/sign.dart';
 import '../bindings/libsodium.ffi.dart';
 import 'aead_ffi.dart';
+import 'aead_aes256gcm_ffi.dart';
 import 'auth_ffi.dart';
 import 'box_ffi.dart';
 import 'generic_hash_ffi.dart';
@@ -42,6 +43,9 @@ class CryptoFFI implements Crypto {
 
   @override
   late final Aead aead = AeadFFI(sodium);
+
+  @override
+  late final Aead aeadAes256Gcm = AeadAes256GcmFFI(sodium);
 
   @override
   late final Auth auth = AuthFFI(sodium);

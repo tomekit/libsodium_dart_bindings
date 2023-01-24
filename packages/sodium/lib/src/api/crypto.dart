@@ -29,6 +29,11 @@ abstract class Crypto {
   /// This provides all APIs that start with `crypto_aead`.
   Aead get aead;
 
+  /// An instance of [Aead].
+  ///
+  /// This provides all APIs that start with `crypto_aead`.
+  Aead get aeadAes256Gcm;
+
   /// An instance of [Auth].
   ///
   /// This provides all APIs that start with `crypto_auth`.
